@@ -54,8 +54,8 @@ class ListItem extends StatelessWidget{
       child: Row(
         children: <Widget>[
           Container(
-            height: 60,
-            width: 60,
+            height: 50,
+            width: 50,
             margin: EdgeInsets.only(right: 10),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(4.0)),
@@ -67,8 +67,8 @@ class ListItem extends StatelessWidget{
             ),
           ),
           Container(
-            height: 60,
-            width: MediaQuery.of(context).size.width - 140,
+            height: 50,
+            width: MediaQuery.of(context).size.width - 115,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -76,12 +76,12 @@ class ListItem extends StatelessWidget{
                 Text(
                   "千寻",
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
                 ),
                 Text(
                   "《千与千寻》是宫崎骏执导、编剧，柊瑠美、入野自由、中村彰男、夏木真理等配音，吉卜力工作室制作的动画电影。",
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+                  style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                 ),
               ],
             ),
@@ -89,7 +89,7 @@ class ListItem extends StatelessWidget{
           Text(
             this.dateFormat((DateTime.now())),
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(fontSize: 14),
+            style: TextStyle(fontSize: 12),
           ),
         ],
       ),

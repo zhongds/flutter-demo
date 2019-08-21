@@ -33,10 +33,10 @@ class _HomeState extends State<Home> {
           currentIndex: _currentIndex,
           onTap: _changeCurrentIndex,
           items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(icon: Icon(Icons.add), title: Text("微信")),
-            BottomNavigationBarItem(icon: Icon(Icons.apps), title: Text("通讯录")),
+            BottomNavigationBarItem(icon: Icon(Icons.chat), title: Text("微信")),
+            BottomNavigationBarItem(icon: Icon(Icons.supervisor_account), title: Text("通讯录")),
             BottomNavigationBarItem(icon: Icon(Icons.settings), title: Text("发现")),
-            BottomNavigationBarItem(icon: Icon(Icons.print), title: Text("我")),
+            BottomNavigationBarItem(icon: Icon(Icons.person), title: Text("我")),
           ]
       ),
     );
@@ -66,19 +66,15 @@ Widget getAppBar(int index) {
       break;
   }
   return AppBar(
-//    backgroundColor: Colors.white,
-    title: Text("$title", style: TextStyle(color: Colors.black87)),
-    centerTitle: true,
+    backgroundColor: Colors.white,
+    title: Text("$title", style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold)),
+//    centerTitle: true,
     automaticallyImplyLeading: false,
 
     actions: <Widget>[
-      IconButton(icon: Icon(Icons.search), onPressed: null),
-//      IconButton(icon: Icon(Icons.add_circle_outline), onPressed: null,),
-  // This is the type used by the popup menu below.
-
-// This menu button widget updates a _selection field (of type _Settings,
-// not shown here).
+      IconButton(icon: Icon(Icons.search, color: Colors.black87,), onPressed: null),
       PopupMenuButton<_Settings>(
+        icon: Icon(Icons.add_circle_outline, color: Colors.black87,),
         onSelected: (_Settings val) { },
         itemBuilder: (BuildContext context) => <PopupMenuEntry<_Settings>>[
           const PopupMenuItem<_Settings>(
